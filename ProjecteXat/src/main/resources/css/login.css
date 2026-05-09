@@ -1,0 +1,176 @@
+/* ═══════════════════════════════════════════
+   LOGIN — Dark Glassmorphism + Electric Cyan
+   Layout: Split horitzontal
+   ═══════════════════════════════════════════ */
+
+.root {
+    -fx-background-color: #070b14;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
+
+/* ── Contenidor principal ── */
+.main-container {
+    -fx-background-color: rgba(13, 25, 48, 0.90);
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color:
+        rgba(0, 212, 170, 0.55),
+        rgba(0, 212, 170, 0.12),
+        rgba(0, 212, 170, 0.04);
+    -fx-border-width: 1px, 1px, 6px;
+    -fx-border-insets: 0, 1, 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.22), 40, 0, 0, 0),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.85), 50, 0, 0, 12);
+    -fx-max-width:  740px;
+    -fx-max-height: 440px;
+    -fx-min-width:  560px;
+    -fx-min-height: 340px;
+}
+
+/* ══ PANELL ESQUERRE ══ */
+.brand-panel {
+    -fx-background-color: rgba(0, 212, 170, 0.05);
+    -fx-background-radius: 18px 0 0 18px;
+    -fx-padding: 40px 30px;
+}
+
+.brand-logo {
+    -fx-text-fill: #00d4aa;
+    -fx-font-size: 52px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.8), 28, 0, 0, 0);
+}
+
+.brand-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8f4f8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.3), 10, 0, 0, 0);
+}
+
+.brand-tagline {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(160, 200, 220, 0.55);
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.brand-version {
+    -fx-font-size: 10px;
+    -fx-text-fill: rgba(0, 212, 170, 0.35);
+}
+
+/* Punts d'estat decoratius */
+.dot {
+    -fx-font-size: 10px;
+}
+.dot-active {
+    -fx-text-fill: #00d4aa;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.9), 8, 0, 0, 0);
+}
+.dot-idle {
+    -fx-text-fill: rgba(0, 212, 170, 0.25);
+}
+
+/* ── Separador vertical ── */
+.vertical-divider {
+    -fx-background-color: linear-gradient(to bottom,
+        transparent,
+        rgba(0, 212, 170, 0.45),
+        transparent);
+}
+
+/* ══ PANELL DRET ══ */
+.form-panel {
+    -fx-padding: 40px 44px;
+    -fx-background-radius: 0 18px 18px 0;
+}
+
+.form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8f4f8;
+}
+
+.form-subtitle {
+    -fx-font-size: 11px;
+    -fx-text-fill: rgba(160, 200, 220, 0.5);
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ── Separador horitzontal ── */
+.divider {
+    -fx-background-color: linear-gradient(to right,
+        rgba(0, 212, 170, 0.5),
+        transparent);
+    -fx-pref-height: 1px;
+    -fx-min-height:  1px;
+    -fx-max-height:  1px;
+}
+
+/* ── Etiquetes dels camps ── */
+.input-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(0, 212, 170, 0.8);
+    -fx-padding: 0 0 4px 2px;
+}
+
+/* ── Camps de text ── */
+.modern-input {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-text-fill: #e8f4f8;
+    -fx-prompt-text-fill: rgba(160, 200, 220, 0.35);
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-padding: 12px 16px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: rgba(0, 212, 170, 0.2);
+    -fx-border-width: 1px;
+}
+.modern-input:focused {
+    -fx-border-color: rgba(0, 212, 170, 0.8);
+    -fx-background-color: rgba(0, 212, 170, 0.06);
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.3), 12, 0, 0, 0);
+}
+.modern-input:hover {
+    -fx-border-color: rgba(0, 212, 170, 0.45);
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Botó de login ── */
+.login-button {
+    -fx-background-color: linear-gradient(to bottom right, #00d4aa, #00a888);
+    -fx-text-fill: #070b14;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 13px 30px;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.5), 18, 0, 0, 4),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 0, 2);
+}
+.login-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #00e8bb, #00c4a0);
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.75), 28, 0, 0, 6),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 3);
+}
+.login-button:pressed {
+    -fx-background-color: linear-gradient(to bottom right, #009e7e, #00836a);
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 170, 0.3), 10, 0, 0, 2);
+}
+
+/* ── Etiqueta d'error ── */
+.error-label {
+    -fx-text-fill: #ff6b6b;
+    -fx-font-size: 12px;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-padding: 6px 12px;
+    -fx-background-color: rgba(255, 107, 107, 0.1);
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(255, 107, 107, 0.25);
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}

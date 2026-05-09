@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.projectexat.client.ui.controllers.LoginController"
+           stylesheets="@/css/login.css"
+           styleClass="root">
+
+    <!-- Contenidor principal horitzontal -->
+    <HBox styleClass="main-container" alignment="CENTER">
+
+        <!-- ══ PANELL ESQUERRE: Branding ══ -->
+        <VBox styleClass="brand-panel" alignment="CENTER" spacing="16.0"
+              HBox.hgrow="ALWAYS">
+
+            <Label styleClass="brand-logo" text="⬡"/>
+            <Label styleClass="brand-title" text="Projecte Xat"/>
+            <Label styleClass="brand-tagline" text="Comunicació en temps real"/>
+
+            <Region prefHeight="20.0"/>
+
+            <!-- Decoració: 3 punts de status -->
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label styleClass="dot dot-active" text="●"/>
+                <Label styleClass="dot dot-idle"   text="●"/>
+                <Label styleClass="dot dot-idle"   text="●"/>
+            </HBox>
+
+            <Label styleClass="brand-version" text="v1.0.0"/>
+
+        </VBox>
+
+        <!-- Separador vertical -->
+        <Region styleClass="vertical-divider" prefWidth="1.0" minWidth="1.0" maxWidth="1.0"/>
+
+        <!-- ══ PANELL DRET: Formulari ══ -->
+        <VBox styleClass="form-panel" alignment="CENTER" spacing="20.0"
+              HBox.hgrow="ALWAYS">
+
+            <VBox alignment="CENTER_LEFT" spacing="4.0" maxWidth="300.0">
+                <Label styleClass="form-title" text="Iniciar sessió"/>
+                <Label styleClass="form-subtitle" text="Introdueix les teves credencials"/>
+            </VBox>
+
+            <!-- Separador horitzontal sota el títol -->
+            <Region styleClass="divider" maxWidth="300.0" prefHeight="1.0" minHeight="1.0"/>
+
+            <!-- Camps -->
+            <VBox spacing="18.0" maxWidth="300.0">
+                <VBox spacing="5.0">
+                    <Label styleClass="input-label" text="NOM D'USUARI"/>
+                    <TextField fx:id="txtUsername" promptText="usuari"
+                               styleClass="modern-input" prefWidth="300.0"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label styleClass="input-label" text="CONTRASENYA"/>
+                    <PasswordField fx:id="txtPassword" promptText="••••••••"
+                                  styleClass="modern-input" prefWidth="300.0"/>
+                </VBox>
+            </VBox>
+
+            <!-- Error -->
+            <Label fx:id="lblError" styleClass="error-label"
+                   visible="false" managed="false" maxWidth="300.0"/>
+
+            <!-- Botó -->
+            <Button fx:id="btnLogin" text="CONNECTAR" onAction="#handleLogin"
+                    styleClass="login-button" prefWidth="300.0"/>
+
+        </VBox>
+
+    </HBox>
+
+</StackPane>
