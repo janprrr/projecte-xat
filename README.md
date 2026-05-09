@@ -96,7 +96,7 @@ java -jar server.jar
 ### 3. Executar client
 
 ```bash
-java -jar client.jar
+java -jar AppLauncher.jar
 ```
 
 ---
